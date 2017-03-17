@@ -142,16 +142,16 @@ const commands = [
   'inspect [repeaterId]',
   'owner [repeaterId]',
   'label [repeaterId]',
-  'timestamp [repeaterId]',
-  'expiration [repeaterId]',
-  'expired [repeaterId]',
   'get [repeaterId]',
   'tryGet [repeaterId]',
-  'claim',
-  'set [repeaterId, value, expiration]',
-  'set [repeaterId, value] (expiration = unlimited)',
+  'claim (minimumValid = 1)',
+  'claim [minimumValid]',
+  'set [repeaterId, feedAddress, position]',
+  'set [repeaterId, feedId, feedAddress, position]',
+  'unset [repeaterId, feedId]',
   'set_owner [repeaterId, ownerAddress]',
   'set_label [repeaterId, labelText]',
+  'set_minimumValid [repeaterId, minimumValid]'
 ];
 
 commands.map(command => command.split(' ')[0]).filter(utils.unique).forEach((command) => {
