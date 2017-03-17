@@ -2,9 +2,9 @@
   "name": "ds-repeater",
   "version": "0.1.0",
   "description": "Command line app to manage repeaters easily.",
-  "main": "./dsrepeater.js",
+  "main": "./dsrepeater",
   "bin": {
-    "dsrepeater": "./dsrepeater.js"
+    "dsrepeater": "./dsrepeater"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -28,9 +28,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/makerdao/ds-repeater/issues"
+    "url": "https://github.com/makerdao/feed-repeater/issues"
   },
-  "homepage": "https://github.com/makerdao/ds-repeater#readme",
+  "homepage": "https://github.com/makerdao/feed-repeater#readme",
   "dependencies": {
     "clui": "^0.3.1",
     "commander": "^2.9.0",
