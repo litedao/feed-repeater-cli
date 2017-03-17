@@ -8,12 +8,12 @@ const inquirer = require('inquirer');
 const Preferences = require('preferences');
 const web3 = require('./web3');
 const utils = require('./utils');
-const dsfeeds = require('./lib/ds-repeater');
+const dsfeeds = require('./lib/dsrepeater');
 
 const Spinner = CLI.Spinner;
 const status = new Spinner('Connecting to network...');
 
-const prefs = new Preferences('com.dapphub.dsfeeds');
+const prefs = new Preferences('com.dapphub.dsrepeater');
 
 function dump(data, options = {}) {
   console.log(prettyjson.render(data, options));
