@@ -3,6 +3,7 @@
 const pkg = require('./package.json');
 const prettyjson = require('prettyjson');
 const program = require('commander');
+const path = require('path');
 const CLI = require('clui');
 const inquirer = require('inquirer');
 const Preferences = require('preferences');
@@ -182,10 +183,11 @@ commands.map(command => command.split(' ')[0]).filter(utils.unique).forEach((com
 });
 
 program.on('--help', () => {
+  const programName = path.basename(process.argv[1], '.js');
   console.log('  Examples:');
   console.log('');
   commands.forEach((command) => {
-    console.log(`    $ ds-repeater ${command}`);
+    console.log(`    $ ${programName} ${command}`);
   });
   console.log('');
 });
