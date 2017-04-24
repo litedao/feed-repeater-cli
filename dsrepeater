@@ -194,6 +194,10 @@ program.on('--help', () => {
 
 program.parse(process.argv); // end with parse to parse through the input
 
+if (!process.argv.slice(2).length) {
+  program.help();
+}
+
 if (program.clear) {
   clearPreferences();
   console.log('Cleared preferences.');
